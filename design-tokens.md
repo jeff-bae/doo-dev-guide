@@ -7,6 +7,7 @@
 > **사용법**: 새 프로젝트를 시작할 때 `tokens/tokens.css`를 프로젝트의 전역 스타일(예: `globals.css`,
 > `index.css`)에 그대로 복사하거나 `@import`합니다. Tailwind 등 유틸리티 프레임워크를 쓰는 프로젝트는
 > `tokens/tokens.json`을 `theme.extend`에 매핑해 사용합니다.
+> 토큰 이식 시 원본을 복사해서 시작할 것.
 
 ## 1. 파일 구성
 
