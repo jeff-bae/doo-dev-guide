@@ -36,12 +36,15 @@
 
 | 토큰 | 값 | 용도 |
 |---|---|---|
-| `--brand-primary` | `#5B5FEE` (Indigo) | 주요 CTA, 링크, 브랜드를 대표하는 컬러 |
-| `--brand-primary-hover` | `#4A4DD6` | primary 호버 상태 |
-| `--brand-primary-strong` | `#3D3FB8` | 텍스트 위 아이콘 등 진한 강조 |
-| `--brand-accent` | `#B6FF3B` (Lime) | "젊음"을 표현하는 포인트 컬러. 배지, 하이라이트, 소량 강조에만 사용 |
+| `--brand-indigo` | `#5B5FEE` | 주요 CTA, 링크, 브랜드를 대표하는 컬러 |
+| `--brand-indigo-hover` | `#4A4DD6` | indigo 호버 상태 |
+| `--brand-indigo-strong` | `#3D3FB8` | 텍스트 위 아이콘 등 진한 강조 |
+| `--brand-lime` | `#B6FF3B` | "젊음"을 표현하는 포인트 컬러. 배지, 하이라이트, 소량 강조에만 사용 |
 | `--brand-violet` | `#8B5CF6` | 그라데이션 보조색 |
 | `--brand-cyan` | `#22D3EE` | 그라데이션 보조색 |
+
+> 토큰 이름은 `design-tokens.md`의 실제 구현값과 항상 동일하게 유지합니다(과거 초안에서 쓰던
+> `--brand-primary`/`--brand-accent`라는 이름은 폐기되었습니다).
 
 **시그니처 그라데이션**: `linear-gradient(135deg, #5B5FEE 0%, #8B5CF6 55%, #22D3EE 100%)`
 히어로 배경, 주요 CTA 버튼, 로딩 인디케이터 등 "혁신" 무드를 표현할 때만 제한적으로 사용합니다.
@@ -93,9 +96,9 @@
 |---|---|---|---|
 | `--surface-elevated` | `#20202B` | `#FFFFFF` (+ `--shadow-lg`) | 모달, 팝오버, 드롭다운, 툴팁 등 콘텐츠 위에 떠 있는 레이어 전용. 일반 카드(`--surface-1`)와 구분 |
 | `--overlay` | `rgba(6,6,10,0.6)` | `rgba(10,10,14,0.4)` | 모달/드로어 뒤 스크림(배경 딤 처리) |
-| `--focus-ring` | `--brand-primary`와 동일 값 | `--brand-primary`와 동일 값 | 포커스 표시 전용 별칭 토큰. 컴포넌트 코드에서 "포커스"라는 의도를 명시하기 위해 별도 이름 사용 |
+| `--focus-ring` | `--brand-indigo`와 동일 값 | `--brand-indigo`와 동일 값 | 포커스 표시 전용 별칭 토큰. 컴포넌트 코드에서 "포커스"라는 의도를 명시하기 위해 별도 이름 사용 |
 | `--text-disabled` | `rgba(245,245,247,0.38)` | `rgba(20,20,26,0.38)` | 비활성 텍스트. `--text-muted`(보조·비활성 아님)와 구분 |
-| `--selection-bg` | `--brand-accent` (라임) | `--brand-accent` (라임) | 텍스트 드래그 선택 하이라이트. 선택된 텍스트 색은 항상 `--surface-0`(어두운 값)로 고정 |
+| `--selection-bg` | `--brand-lime` | `--brand-lime` | 텍스트 드래그 선택 하이라이트. 선택된 텍스트 색은 항상 `--surface-0`(어두운 값)로 고정 |
 
 **원칙**: 모달/팝오버는 `--surface-elevated` + `--shadow-lg`를 함께 사용해야 "떠 있음"이 인지됩니다.
 다크 테마에서 surface 레이어 구분만으로 충분한 카드/패널(§5)과 달리, 이 레이어들은 그림자를 생략하지 않습니다.
@@ -103,7 +106,7 @@
 ### 2.6 대비(Contrast) 원칙
 
 모든 텍스트/배경 조합은 **WCAG AA(본문 4.5:1, 큰 텍스트 3:1)** 이상을 만족해야 합니다.
-`--brand-accent`(라임)는 명도가 매우 높아 배경으로 쓸 경우 그 위 텍스트는 반드시 `--surface-0`(어두운 색)을 사용합니다.
+`--brand-lime`은 명도가 매우 높아 배경으로 쓸 경우 그 위 텍스트는 반드시 `--surface-0`(어두운 색)을 사용합니다.
 
 ## 3. 타이포그래피
 
