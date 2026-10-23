@@ -42,6 +42,13 @@
   --focus-ring: var(--brand-indigo);
   --selection-bg: var(--brand-lime);
 
+  /* accent & component — 활성 메뉴 강조색, 세그먼트 선택 항목, 일정 막대 배경 진하기 */
+  --accent-fg: var(--brand-indigo);
+  --accent-alpha: 12%;
+  --segmented-active: var(--surface-0);
+  --bar-alpha: 12%;
+  --bar-range-alpha: 22%;
+
   /* semantic */
   --color-success: #1F9D5C;
   --color-warning: #B57A0A;
@@ -113,17 +120,19 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --surface-0: #0B0B10;
-    --surface-1: #131318;
-    --surface-2: #1C1C24;
-    --surface-elevated: #20202B;
-    --border-subtle: #2A2A34;
-    --border-strong: #3A3A46;
-    --text-primary: #F5F5F7;
-    --text-secondary: #A0A0AE;
-    --text-muted: #6B6B7A;
-    --text-disabled: rgba(245, 245, 247, 0.38);
-    --overlay: rgba(6, 6, 10, 0.6);
+    /* neutral — Radix Colors Slate Dark 12단계 (https://www.radix-ui.com/colors)
+       1 앱 배경 · 2 카드 · 3 패널 · 4 hover · 6 옅은 선 · 8 진한 선 · 11 보조 글자 · 12 본문 */
+    --surface-0: #18191B;        /* slate 2  카드·주 콘텐츠 */
+    --surface-1: #111113;        /* slate 1  앱 배경 */
+    --surface-2: #272A2D;        /* slate 4  hover·컨트롤 바탕 */
+    --surface-elevated: #212225; /* slate 3  패널·토스트 */
+    --border-subtle: #363A3F;    /* slate 6 */
+    --border-strong: #5A6169;    /* slate 8 */
+    --text-primary: #EDEEF0;     /* slate 12 */
+    --text-secondary: #B0B4BA;   /* slate 11 */
+    --text-muted: #868A92;       /* slate 10~11 사이 — 10(#777B84)은 작은 글자에 조금 어두움 */
+    --text-disabled: rgba(237, 238, 240, 0.38);
+    --overlay: rgba(0, 0, 0, 0.6);
     --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
     --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
     --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
@@ -131,21 +140,30 @@
     --color-warning: #F5B942;
     --color-danger: #F14F5A;
     --color-info: #4EA1FF;
+
+    /* accent & component */
+    --accent-fg: #9EB1FF;        /* Radix indigo 11 계열 — 어두운 배경에서 읽히는 강조색 */
+    --accent-alpha: 26%;
+    --segmented-active: #363A3F; /* slate 6 — 바탕(surface-2)보다 밝게 */
+    --bar-alpha: 22%;
+    --bar-range-alpha: 34%;
   }
 }
 
 :root[data-theme="dark"] {
-  --surface-0: #0B0B10;
-  --surface-1: #131318;
-  --surface-2: #1C1C24;
-  --surface-elevated: #20202B;
-  --border-subtle: #2A2A34;
-  --border-strong: #3A3A46;
-  --text-primary: #F5F5F7;
-  --text-secondary: #A0A0AE;
-  --text-muted: #6B6B7A;
-  --text-disabled: rgba(245, 245, 247, 0.38);
-  --overlay: rgba(6, 6, 10, 0.6);
+  /* neutral — Radix Colors Slate Dark 12단계 (https://www.radix-ui.com/colors)
+     1 앱 배경 · 2 카드 · 3 패널 · 4 hover · 6 옅은 선 · 8 진한 선 · 11 보조 글자 · 12 본문 */
+  --surface-0: #18191B;        /* slate 2  카드·주 콘텐츠 */
+  --surface-1: #111113;        /* slate 1  앱 배경 */
+  --surface-2: #272A2D;        /* slate 4  hover·컨트롤 바탕 */
+  --surface-elevated: #212225; /* slate 3  패널·토스트 */
+  --border-subtle: #363A3F;    /* slate 6 */
+  --border-strong: #5A6169;    /* slate 8 */
+  --text-primary: #EDEEF0;     /* slate 12 */
+  --text-secondary: #B0B4BA;   /* slate 11 */
+  --text-muted: #868A92;       /* slate 10~11 사이 — 10(#777B84)은 작은 글자에 조금 어두움 */
+  --text-disabled: rgba(237, 238, 240, 0.38);
+  --overlay: rgba(0, 0, 0, 0.6);
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
   --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
   --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.5);
@@ -153,4 +171,11 @@
   --color-warning: #F5B942;
   --color-danger: #F14F5A;
   --color-info: #4EA1FF;
+
+  /* accent & component */
+  --accent-fg: #9EB1FF;        /* Radix indigo 11 계열 — 어두운 배경에서 읽히는 강조색 */
+  --accent-alpha: 26%;
+  --segmented-active: #363A3F; /* slate 6 — 바탕(surface-2)보다 밝게 */
+  --bar-alpha: 22%;
+  --bar-range-alpha: 34%;
 }
